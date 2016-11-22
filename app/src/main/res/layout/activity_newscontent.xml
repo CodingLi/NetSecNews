@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:id="@+id/toolbar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/commit_scroll"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="56dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/webview">
+            </WebView>
+
+            <ListView
+                android:id="@+id/comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--一条线分割-->
+    <!--<View style="@style/bg_line"/>-->
+    <LinearLayout
+        android:id="@+id/area_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/bg_comment_comment"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dip">
+
+        <EditText
+            android:id="@+id/comment_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_edittext_account"
+            android:ems="10"
+            android:hint="来评论一句吧"
+            android:minHeight="40dp"
+            android:paddingLeft="4dip">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/comment_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0"
+            android:background="@drawable/selector_logout"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:padding="8dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="评论"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

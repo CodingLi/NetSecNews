@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:id="@+id/login_toolbar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="登录"
+            android:textSize="20.0sp"
+            android:id="@+id/login_toolbar_title"/>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteGray" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip"
+            android:id="@+id/linearLayout">
+
+            <EditText
+                android:id="@+id/userNameText"
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginTop="15.0dip"
+                android:drawablePadding="15.0dip"
+                android:drawableLeft="@drawable/login_phone"
+                android:ems="10"
+                android:hint="请输入账户"
+                android:inputType="text"
+                android:paddingBottom="2.0dip"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip"
+                android:paddingTop="2.0dip"
+                android:singleLine="true"
+                android:textColorHint="#ff999999"
+                android:textSize="16.0sp"
+                android:background="@color/white"/>
+
+            <!--一条线分割FragmentTabhost 和 ViewPage-->
+            <View style="@style/bg_line"/>
+
+            <EditText
+                android:id="@+id/passwdText"
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:drawablePadding="15.0dip"
+                android:drawableLeft="@drawable/login_pw"
+                android:ems="10"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:paddingBottom="2.0dip"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip"
+                android:paddingTop="2.0dip"
+                android:singleLine="true"
+                android:textColorHint="#ff999999"
+                android:textSize="16.0sp"
+                android:background="@color/white"/>
+
+            <!--android:background="@drawable/button_login_pressed"-->
+            <Button
+                android:id="@+id/bnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:singleLine="true"
+                android:background="@color/blue"
+                android:text="登录"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editRegister"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="立即注册"
+            android:textColor="@color/blue"
+            android:textSize="15.0sp"
+            android:background="@null"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editForgetPass"
+            android:layout_alignBottom="@+id/editRegister"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="忘记密码？"
+            android:textColor="@color/blue"
+            android:textSize="15.0sp"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

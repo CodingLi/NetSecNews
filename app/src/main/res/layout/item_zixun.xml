@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="如何有效地在海外市场推广产品？"
+        android:id="@+id/zixun_title"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:id="@+id/zixun_img"
+            android:layout_marginRight="8dp"
+            android:visibility="visible"
+            android:src="@drawable/image"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:maxLines="3"
+                    android:id="@+id/zixun_digest"
+                    android:textColor="@color/nomalGray"
+                    android:textSize="12sp"
+                    android:text="3D打印机一直以来只能进行单向操作，任务一旦开始便无法反悔。不过最近一批研究生研发了一种新型打印机，让你在打印的同时，可以修改重塑之前的设计。让我们一起来看看这个神奇的设备究竟是怎样的吧。"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zixun_source"
+                    android:paddingTop="12dp"
+                    android:textSize="10sp"
+                    android:text="腾讯网"
+                    android:textColor="@color/nomalGray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zixun_ptime"
+                    android:paddingTop="12dp"
+                    android:text="13分钟前"
+                    android:textSize="10sp"
+                    android:layout_toLeftOf="@+id/zixun_commentcount"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/nomalGray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zixun_commentcount"
+                    android:paddingTop="12dp"
+                    android:text="100评论"
+                    android:textSize="10sp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/nomalGray"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

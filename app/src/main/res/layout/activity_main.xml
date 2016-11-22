@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/tabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <!--一条线分割FragmentTabhost 和 ViewPage-->
+    <View style="@style/bg_line"/>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/shape_white">
+    </android.support.v4.app.FragmentTabHost>
+
+
+</LinearLayout>
+

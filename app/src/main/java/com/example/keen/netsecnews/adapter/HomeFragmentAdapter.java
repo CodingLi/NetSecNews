@@ -23,7 +23,6 @@ public class HomeFragmentAdapter extends FragmentPagerAdapter {
 
     private String[] titles = new String[]{"资讯", "推荐", "热点", "指数", "问答"};
 
-    private List<String> mTitles;
     public HomeFragmentAdapter(FragmentManager fm){
         super(fm);
     }

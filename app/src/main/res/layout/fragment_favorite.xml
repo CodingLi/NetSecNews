@@ -4,11 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#00D700">
+    android:background="@color/blue">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/blue"
+        android:id="@+id/favorite_toolbar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我的收藏"
+            android:textSize="20.0sp"
+            android:id="@+id/favorite_toolbar_title"/>
+    </android.support.v7.widget.Toolbar>
+
+    <com.viewpagerindicator.TabPageIndicator
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="收藏Fragment"/>
+        android:id="@+id/favorite_indicator"
+        android:background="@color/blue">
+
+    </com.viewpagerindicator.TabPageIndicator>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/favorite_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_f5f5f5"
+        />
+
+
 
 </LinearLayout>

@@ -29,6 +29,5 @@ public class ZixunRecyclerAdapter extends CommonAdapter<Zixun> {
         holder.setText(R.id.zixun_ptime, item.getNews_publish_time());
         holder.setText(R.id.zixun_commentcount, Integer.toString(item.getComment_count()) + "评论");
         holder.setImageResource(R.id.zixun_img, R.drawable.image2);
-
     }
 }

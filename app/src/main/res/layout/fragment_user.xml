@@ -5,179 +5,149 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@color/blue">
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@color/blue"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:id="@+id/profile_image"
-        android:src="@drawable/user_image"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"
-        android:layout_marginTop="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@color/blue"
-        android:text="登录/注册"
-        android:id="@+id/textView"
-        android:layout_below="@+id/profile_image"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <LinearLayout
-        style="@style/wrap_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/user_photo">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:id="@+id/profile_image"
+            android:src="@drawable/user_image"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/blue"
+            android:text="登录/注册"
+            android:id="@+id/textView" />
+    </LinearLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/user_scroll"
+        android:layout_below="@+id/user_photo"
         android:background="@color/whiteGray"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/whiteGray"
+            android:layout_below="@+id/user_photo">
+            //1
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="20dp">
+                <LinearLayout style="@style/top_layout">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/my_info"/>
+                    <TextView style="@style/usertext" android:text="   我的资料" />
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+                <View style="@style/bg_line"/>
+                <LinearLayout style="@style/mid_layout">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/my_setting"/>
+                    <TextView style="@style/usertext" android:text="   应用设置" />
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+                <View style="@style/bg_line"/>
+                <LinearLayout style="@style/bottom_layout">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/my_message"/>
+                    <TextView style="@style/usertext" android:text="   消息通知" />
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
 
-        //1
-        <LinearLayout style="@style/wrap_layout"
-            android:background="@color/white"
-            android:layout_marginTop="41dp">
-            <!-- 上圆角-->
-            <LinearLayout style="@style/top_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_info"/>
-                <TextView style="@style/usertext" android:text="   我的资料" />
-                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            //2
+            <!-- 全圆角-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="20dp">
+                <LinearLayout style="@style/single_layout">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/my_about"/>
+                    <TextView style="@style/usertext"
+                        android:id="@+id/id_textview_advision"
+                        android:text="   意见反馈"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
+                <View style="@style/bg_line"/>
+
+                <LinearLayout style="@style/single_layout">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/my_about"/>
+                    <TextView style="@style/usertext"
+                        android:id="@+id/id_textview_about_us"
+                        android:text="   关于我们"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-            <!-- 分割线 -->
-            <View style="@style/bg_line"/>
-            <!-- 无圆角-->
-            <LinearLayout style="@style/mid_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_follow"/>
-                <TextView style="@style/usertext" android:text="   本地收藏" />
-                <ImageView style="@style/img_arrow"/>
+            //4
+            <!-- 全圆角-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout style="@style/single_layout">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/my_about"/>
+                    <TextView style="@style/usertext"
+                        android:id="@+id/id_textview_logout"
+                        android:text="   退出登录"/>
+                    <ImageView style="@style/img_arrow"/>
+                </LinearLayout>
+
             </LinearLayout>
-            <View style="@style/bg_line"/>
-            <!-- 下圆角-->
-            <LinearLayout style="@style/bottom_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_message"/>
-                <TextView style="@style/usertext" android:text="   我的消息" />
-                <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
+
+
 
         </LinearLayout>
 
-        //2
-        <LinearLayout style="@style/wrap_layout"
-            android:background="@color/white"
-            android:layout_marginTop="43dp">
-            <!-- 上圆角-->
-            <LinearLayout style="@style/top_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_system_message"/>
-                <TextView style="@style/usertext" android:text="   系统消息" />
-                <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
-
-            <!-- 分割线 -->
-            <View style="@style/bg_line"/>
-            <!-- 无圆角-->
-            <LinearLayout style="@style/mid_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_setting"/>
-                <TextView style="@style/usertext" android:text="   账号设置" />
-                <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
-            <View style="@style/bg_line"/>
-            <!-- 下圆角-->
-            <LinearLayout style="@style/bottom_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_help"/>
-                <TextView style="@style/usertext" android:text="   使用帮助" />
-                <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        //3
-        <!-- 全圆角-->
-        <LinearLayout style="@style/wrap_layout"
-            android:background="@color/white"
-            android:layout_marginTop="45dp">
-            <LinearLayout style="@style/single_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_about"/>
-                <TextView style="@style/usertext"
-                    android:id="@+id/id_textview_advision"
-                    android:text="   意见反馈"/>
-                <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
-
-            <View style="@style/bg_line"/>
-
-            <LinearLayout style="@style/single_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_about"/>
-                <TextView style="@style/usertext"
-                    android:id="@+id/id_textview_about_us"
-                    android:text="   关于我们"/>
-                <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        //4
-        <!-- 全圆角-->
-        <LinearLayout style="@style/wrap_layout"
-            android:background="@color/white"
-            android:layout_marginTop="47dp">
-
-            <LinearLayout style="@style/single_layout">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/my_about"/>
-                <TextView style="@style/usertext"
-                    android:id="@+id/id_textview_logout"
-                    android:text="   退出登录"/>
-                <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
-
-        </LinearLayout>
+    </ScrollView>
 
 
-
-    </LinearLayout>
 
 
 </RelativeLayout>
